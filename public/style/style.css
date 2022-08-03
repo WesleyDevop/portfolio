@@ -295,7 +295,6 @@ h3 {
 }
 
 .project_box {
-    padding: 0px 0px 20px;
     background-color: rgb(28, 28, 28);
     max-width: 500px;
     border-bottom: solid 1px rgb(23, 103, 243);
@@ -327,6 +326,29 @@ h3 {
 .used_tec_style {
     color: rgb(49, 150, 238);
 }
+
+.btn_project {
+    padding: 20px;
+    
+}
+
+.btn_project i {
+    color: rgb(36, 102, 244);
+}
+
+.btn_project a {
+    color: white;
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    border-radius: 5px;
+    transition: .6s all;
+}
+
+.btn_project a:hover {
+    color: rgb(206, 206, 206);
+    transition: .6s all;
+}
+
 
 
 /* Rodapé */

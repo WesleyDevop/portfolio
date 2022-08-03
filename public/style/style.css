@@ -48,7 +48,12 @@ h3 {
     min-height: 35vh;
 }
 
+.icon {
+    display: none;
+}
+
 /* Menu de navegação */
+
 
 .navbar {
     padding-top: 10px;
@@ -182,7 +187,27 @@ h3 {
 	}
 }
 
+.github {
+    color: white;
+    margin-top: 10px;
+    padding: 15px 20px;
+    background-color: rgb(14, 14, 14);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: .6s all;
+}
 
+.github i {
+    margin-right: 10px;
+    font-size: 1em;
+}
+
+.github:hover {
+    background-color: rgb(13, 13, 13);
+    color: rgb(48, 122, 232);
+    transition: .6s all;
+    
+}
 
 /* Sobre mim */
 
@@ -202,7 +227,7 @@ h3 {
 }
 
 .myPhoto img {
-    width: 50%;
+    width: 70%;
     border-left: rgba(79, 149, 255, 0.899) 3px solid;
 }
 
@@ -319,6 +344,7 @@ footer p {
     color: white;
     font-weight: 600;
     letter-spacing: 2px;
+    text-align: center;
 }
 
 footer p i {
@@ -326,7 +352,7 @@ footer p i {
 }
 
 /* Responsividade */
-@media (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
     .projects_list {
         grid-auto-flow: column;
         grid-template-columns: 1fr 1fr;
@@ -344,7 +370,7 @@ footer p i {
     }
 }
 
-@media (max-width:1080px) {
+@media screen and (max-width:1080px) {
     .leftContent h1 {
         font-size: 2.5em;
     }
@@ -363,16 +389,18 @@ footer p i {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
     .leftContent {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-    }
-    .rightContent {
-        display: none;
     }
     .myText {
         max-width: 100%;
@@ -381,7 +409,6 @@ footer p i {
         font-size: 1em;
     }
     .myPhoto {
-        max-width: 50vh;
         min-height: 30vh;
     }
     .about_me {
@@ -400,12 +427,71 @@ footer p i {
         margin-bottom: 50%;
         grid-gap: 2%;
     }
-    .myPhoto {
-        min-height: 30vh;
-
-    }
     .myText { 
         min-height: 20vh;
         justify-content: flex-start;
     }
+    .leftContent h1 {
+        text-align: center;
+    }
+    .leftContent p {
+        text-align: center;
+    }
 }
+
+@media screen and (max-width: 535px) {
+    .myText p {
+        font-size: 13px;
+    }
+    .leftContent h1 {
+        font-size: 1.5rem;
+        margin-bottom: 7px;
+    }
+    .leftContent p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsividade da Navbar */
+
+@media screen and (max-width: 600px) {
+    .navbar ul {
+        display: none;
+    }
+    .navbar .icon {
+        color: rgb(211, 211, 211);
+        display: flex;
+        justify-content: flex-end;
+        display: block;
+        font-size: 1.5em;
+    }
+    .navbar {
+        justify-content: space-around;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar.responsive ul {
+        background-color: rgb(16, 16, 16);
+        margin-bottom: 10%;
+        position: absolute;
+        top: 50px;
+        display: block;
+        width: 100%;
+        z-index: 999;
+    }
+    .navbar.responsive ul li {
+        border-bottom: 1px solid rgb(36, 109, 235);
+    }
+  }
+
+  @media screen and (max-width: 340px) {
+    .rightContent img {
+        min-width: 250px;
+        margin-bottom: 25px;
+    }
+    .projects_list {
+        padding-bottom: 10px;
+    }
+  }

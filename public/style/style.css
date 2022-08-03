@@ -302,20 +302,6 @@ h3 {
     color: rgb(49, 150, 238);
 }
 
-@media (max-width: 1440px) {
-    .projects_list {
-        grid-auto-flow: column;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        margin-bottom: 50px;
-    }
-    .project_box:nth-last-child() {
-        display: none;
-    }
-    .project_box:nth-child(4) {
-        display: block;
-    }
-}
 
 /* Rodapé */
 
@@ -336,4 +322,65 @@ footer p {
 
 footer p i {
     margin-left: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 1440px) {
+    .projects_list {
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 50px;
+    }
+    .project_box:nth-last-child() {
+        display: none;
+    }
+    .project_box:nth-child(4) {
+        display: block;
+    }
+    .leftContent h1 {
+        font-size: 3em;
+    }
+}
+
+@media (max-width:1080px) {
+    .leftContent h1 {
+        font-size: 2.5em;
+    }
+    .leftContent p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .leftContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .rightContent {
+        display: none;
+    }
+    .myText {
+        max-width: 100%;
+    }
+    .myText p {
+        font-size: 1em;
+    }
+    .myPhoto {
+        max-width: 50vh;
+        min-height: 30vh;
+    }
+    .about_me {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about_me_buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

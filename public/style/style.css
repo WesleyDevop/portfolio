@@ -189,8 +189,9 @@ h3 {
 .about_me {
     background: rgb(16, 16, 16);
     display: flex;
-    min-height: 30vh;
+    min-height: 10vh;
     border-bottom: solid 1px rgb(48, 48, 48);
+    justify-content: center;
 }
 
 .myPhoto {
@@ -198,7 +199,6 @@ h3 {
     justify-content: center;
     align-items: center;
     min-height: 50vh;
-    width: 50em;
 }
 
 .myPhoto img {
@@ -254,6 +254,7 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     margin-bottom: 2%;
 }
 
@@ -350,6 +351,16 @@ footer p i {
     .leftContent p {
         font-size: 1.5em;
     }
+    .myText {
+            max-width: 100%;
+    }
+    .about_me {
+        flex-direction: column;
+    }
+    .myText { 
+        min-height: 25vh;
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 768px) {
@@ -382,5 +393,19 @@ footer p i {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    .projects_list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        margin-bottom: 50%;
+        grid-gap: 2%;
+    }
+    .myPhoto {
+        min-height: 30vh;
+
+    }
+    .myText { 
+        min-height: 20vh;
+        justify-content: flex-start;
     }
 }
